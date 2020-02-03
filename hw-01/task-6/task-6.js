@@ -3,13 +3,25 @@
 let input;
 let total = 0;
 
-do {
-  input = prompt('Введите число');
-  total += Number(input);
+while (true) {
+  input = prompt('Введите целое число.');
 
-  if (isNaN(input)) {
-    alert('Введено не число, попробуйте еще раз');
-    input = prompt('Введите число');
+  if (input === null) {
+    break;
   }
-} while (input !== null);
+
+  input = Number(input);
+
+  if (input <= 0) {
+    break;
+  }
+
+  if (Number.isNaN(input)) {
+    alert('Было введено не число, попробуйте еще раз');
+    break;
+  }
+
+  total += input;
+}
+
 alert(`Общая сумма чисел равна ${total}`);
