@@ -14,9 +14,7 @@ class StringBuilder {
     this._value = str + this._value;
   }
   pad(str) {
-    return (this._value = str + this._value + str);
-    this.append(str);
-    this.prepend(str);
+    this._value = str + this._value + str;
   }
 }
 
