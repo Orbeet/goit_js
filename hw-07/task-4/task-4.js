@@ -8,12 +8,12 @@ let counterValue = 0;
 
 function increment() {
   counterValue += 1;
-  return (counter.innerHTML = counterValue);
+  counter.innerHTML = counterValue;
 }
 
 function decrement() {
   counterValue -= 1;
-  return (counter.innerHTML = counterValue);
+  counter.innerHTML = counterValue;
 }
 
 plus.addEventListener('click', increment);
