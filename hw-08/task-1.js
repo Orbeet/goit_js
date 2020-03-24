@@ -49,25 +49,3 @@ function handleCloseButton(e) {
   lightbox.classList.remove('is-open');
   lightboxImage.src = '';
 }
-
-lightbox.addEventListener('click', handleClose);
-
-const lightboxContent = document.querySelector('.lightbox__content');
-
-function handleClose(e) {
-  if (e.target === lightboxContent) {
-    lightbox.classList.remove('is-open');
-    lightboxImage.src = '';
-  }
-}
-
-document.addEventListener('keydown', handleCloseByEcs);
-
-function handleCloseByEcs(e) {
-  const key = e.keyCode;
-
-  if (key === 27) {
-    lightbox.classList.remove('is-open');
-    lightboxImage.src = '';
-  }
-}
